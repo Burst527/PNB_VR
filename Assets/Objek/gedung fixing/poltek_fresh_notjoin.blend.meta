@@ -37,6 +37,16 @@ ModelImporter:
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
+      name: Frame
+    second: {fileID: 2100000, guid: 4b259b00c6f83a946a55ae657e251ede, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Glass
+    second: {fileID: 2100000, guid: 3a47fa47b9628b5429fdac5cfe08e3f3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
       name: Lantai
     second: {fileID: 2100000, guid: d0d0f93b5d4c64d42948fda889ad2669, type: 2}
   - first:
@@ -69,6 +79,16 @@ ModelImporter:
       assembly: UnityEngine.CoreModule
       name: Material.002
     second: {fileID: 2100000, guid: d9865edaddd60c144afe198a735960b4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.004
+    second: {fileID: 2100000, guid: de116447dec34aa4a9f8e4e55ad32559, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Material.005
+    second: {fileID: 2100000, guid: 38ec2607972c06044b08d221b4bd0b7d, type: 2}
   - first:
       type: UnityEngine:Material
       assembly: UnityEngine.CoreModule
