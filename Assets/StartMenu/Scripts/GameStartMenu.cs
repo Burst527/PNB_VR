@@ -10,10 +10,12 @@ public class GameStartMenu : MonoBehaviour
     public GameObject options;
     public GameObject about;
     public GameObject location;
+    public GameObject controls;
 
     [Header("Main Menu Buttons")]
     public Button startButton;
     public Button optionButton;
+    public Button coontrolsButton;
     public Button aboutButton;
     public Button quitButton;
 
@@ -34,6 +36,7 @@ public class GameStartMenu : MonoBehaviour
         optionButton.onClick.AddListener(EnableOption);
         aboutButton.onClick.AddListener(EnableAbout);
         quitButton.onClick.AddListener(QuitGame);
+        coontrolsButton.onClick.AddListener(EnableControls);
         EB.onClick.AddListener(() => SpwanGame(2));
         D4.onClick.AddListener(() => SpwanGame(1)); 
 
@@ -63,6 +66,7 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         options.SetActive(false);
+        controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
     }
@@ -76,6 +80,7 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(true);
         options.SetActive(false);
+        controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
     }
@@ -83,6 +88,7 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         options.SetActive(false);
+        controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(true);
     }
@@ -90,6 +96,7 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         options.SetActive(true);
+        controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
     }
@@ -97,7 +104,17 @@ public class GameStartMenu : MonoBehaviour
     {
         mainMenu.SetActive(false);
         options.SetActive(false);
+        controls.SetActive(false);
         about.SetActive(true);
+        location.SetActive(false);
+    }
+
+    public void EnableControls()
+    {
+        mainMenu.SetActive(false);
+        options.SetActive(false);
+        controls.SetActive(true);
+        about.SetActive(false);
         location.SetActive(false);
     }
 }
