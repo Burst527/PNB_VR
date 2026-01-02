@@ -3,7 +3,97 @@ guid: 2e2a9ea4f8648fe418c11834670e4333
 ModelImporter:
   serializedVersion: 24200
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Plants
+    second: {fileID: 2100000, guid: 36b0cedb37ffc7d42a9a66fc083a39f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _kokos_
+    second: {fileID: 2100000, guid: 190e4a0199fb06b468602398663b6207, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palm_4_a
+    second: {fileID: 2100000, guid: d4c08499009dc6c46ab09146c21b8073, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_1_leaves
+    second: {fileID: 2100000, guid: bcc6fa383763c8844ab0dcf4e4235028, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_2
+    second: {fileID: 2100000, guid: bb9cb80ea4ec70f4894bc40f94c8b2cf, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_2.001
+    second: {fileID: 2100000, guid: 5c02db600341f924ea3586d706fc9947, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_2_leaves
+    second: {fileID: 2100000, guid: 16e9736f08dbcd249b2812f07d17fcad, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_3
+    second: {fileID: 2100000, guid: a9265dceaff3f9841b76c197d3557bcd, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_3_leaves_
+    second: {fileID: 2100000, guid: b08c6e879d416e94eb6e2d48060e3b9d, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_4
+    second: {fileID: 2100000, guid: 36f8b75d9288f03488618ee6f203bd19, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _palma_4_leaves
+    second: {fileID: 2100000, guid: 07b8edfe5dfe5fe4f87ea613809dfec6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _plant_2_
+    second: {fileID: 2100000, guid: ef3234fe840a0ce4bb0bc7b035c8b243, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _plant_2_==_
+    second: {fileID: 2100000, guid: 06d05174b3612c44fb8dfbc7731d28de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _plant_3+_
+    second: {fileID: 2100000, guid: 82a591b8561783d499eb5d52e1ee7ddc, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _plant_3_
+    second: {fileID: 2100000, guid: f857ab91bd8449c4eb836f2c6f725af4, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: _plants_big
+    second: {fileID: 2100000, guid: b52fde5f69c8d814bb75083ef3a9050a, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flower_blue
+    second: {fileID: 2100000, guid: cd0ea42deeef12d47a783c5376e90c80, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: flower_red
+    second: {fileID: 2100000, guid: 87ecdebc4106d5949974eb976424b467, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0

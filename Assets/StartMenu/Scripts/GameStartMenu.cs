@@ -39,6 +39,7 @@ public class GameStartMenu : MonoBehaviour
         coontrolsButton.onClick.AddListener(EnableControls);
         EB.onClick.AddListener(() => SpwanGame(2));
         D4.onClick.AddListener(() => SpwanGame(1)); 
+        PUT.onClick.AddListener(() => SpwanGame(3)); 
 
 
 

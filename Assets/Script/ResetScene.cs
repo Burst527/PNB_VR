@@ -7,14 +7,6 @@ public class SceneSwitcher : MonoBehaviour
 
      public void SwitchScene()
     {
-        if (AmbienceManager.instance != null)
-            AmbienceManager.instance.FadeOut();
-    
-        Invoke(nameof(LoadScene), 1.5f);
-    }
-    
-    void LoadScene()
-    {
         string current = SceneManager.GetActiveScene().name;
     
         if (current == targetScene)
@@ -22,6 +14,7 @@ public class SceneSwitcher : MonoBehaviour
         else
             SceneManager.LoadScene(targetScene);
     }
+    
    
     
 }
