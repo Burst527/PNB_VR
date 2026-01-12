@@ -3621,7 +3621,6 @@ GameObject:
   - component: {fileID: 260406608}
   - component: {fileID: 260406607}
   - component: {fileID: 260406606}
-  - component: {fileID: 260406605}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -3649,25 +3648,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0567, y: 0.1875}
   m_SizeDelta: {x: 0.5722, y: 0.214}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &260406605
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 260406603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &260406606
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5006,13 +4986,14 @@ GameObject:
   m_Component:
   - component: {fileID: 317740650}
   - component: {fileID: 317740649}
+  - component: {fileID: 317740651}
   m_Layer: 0
   m_Name: QUIZ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &317740649
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5067,6 +5048,25 @@ Transform:
   - {fileID: 1616838957}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 66.63, z: 0}
+--- !u!114 &317740651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 317740648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1 &327722176 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: cac25550567429441aa05749c3d26b45, type: 3}
@@ -6175,6 +6175,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
   targetScene: StartScene
+  isNextBuilding: 0
 --- !u!1 &375260435
 GameObject:
   m_ObjectHideFlags: 0
@@ -6187,7 +6188,6 @@ GameObject:
   - component: {fileID: 375260440}
   - component: {fileID: 375260439}
   - component: {fileID: 375260438}
-  - component: {fileID: 375260437}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -6216,25 +6216,6 @@ RectTransform:
   m_AnchoredPosition: {x: 0.0482, y: 0.1409}
   m_SizeDelta: {x: 0.8006, y: 0.2052}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &375260437
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 375260435}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &375260438
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13636,7 +13617,6 @@ GameObject:
   - component: {fileID: 811154750}
   - component: {fileID: 811154749}
   - component: {fileID: 811154748}
-  - component: {fileID: 811154747}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -13664,25 +13644,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &811154747
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 811154745}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &811154748
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14482,7 +14443,6 @@ GameObject:
   - component: {fileID: 833118431}
   - component: {fileID: 833118430}
   - component: {fileID: 833118429}
-  - component: {fileID: 833118428}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -14510,25 +14470,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &833118428
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 833118426}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &833118429
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15187,6 +15128,10 @@ PrefabInstance:
       propertyPath: m_RayInteractorChanged.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 6232745470614056090, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6480925242510836759, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       propertyPath: m_Enabled
       value: 1
@@ -15229,6 +15174,12 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 224129627}
     m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 867257717}
+    - targetCorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 867257716}
     - targetCorrespondingSourceObject: {fileID: 1767192433, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
       insertIndex: -1
       addedObject: {fileID: 1164570924}
@@ -15249,6 +15200,61 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 1767192434, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
   m_PrefabInstance: {fileID: 867257712}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &867257715 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 1717954561962503725, guid: f6336ac4ac8b4d34bc5072418cdc62a0, type: 3}
+  m_PrefabInstance: {fileID: 867257712}
+  m_PrefabAsset: {fileID: 0}
+--- !u!136 &867257716
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867257715}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.16261101
+  m_Height: 1.6389484
+  m_Direction: 1
+  m_Center: {x: -0.019044876, y: 0.84699893, z: 0}
+--- !u!54 &867257717
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867257715}
+  serializedVersion: 5
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &868330619
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16717,7 +16723,6 @@ GameObject:
   m_Component:
   - component: {fileID: 963444967}
   - component: {fileID: 963444969}
-  - component: {fileID: 963444968}
   m_Layer: 0
   m_Name: triggerbox1 (2)
   m_TagString: Untagged
@@ -16740,18 +16745,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1038755893}
   m_LocalEulerAnglesHint: {x: 0, y: 16.587, z: 0}
---- !u!114 &963444968
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 963444966}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a665bf010662a764e8c96590cd8a83a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTrigger
 --- !u!65 &963444969
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -17089,7 +17082,6 @@ GameObject:
   - component: {fileID: 978700979}
   - component: {fileID: 978700978}
   - component: {fileID: 978700977}
-  - component: {fileID: 978700976}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -17117,25 +17109,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.0567, y: 0.1875}
   m_SizeDelta: {x: 0.5722, y: 0.214}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &978700976
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 978700974}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &978700977
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18311,6 +18284,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1038755893}
+  - component: {fileID: 1038755894}
   m_Layer: 0
   m_Name: Trigger
   m_TagString: Untagged
@@ -18336,6 +18310,25 @@ Transform:
   - {fileID: 963444967}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1038755894
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1038755892}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d21b2e68ee2b80d469f5a95a249c70db, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTriggerManager
+  objectives:
+  - triggers:
+    - {fileID: 0}
+  - triggers:
+    - {fileID: 0}
+  - triggers:
+    - {fileID: 0}
 --- !u!1001 &1041337550
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -18968,6 +18961,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::SceneSwitcher
   targetScene: GedungPUT
+  isNextBuilding: 0
 --- !u!1001 &1075923814
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -19983,7 +19977,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 728a5fa9ebe0a6f4cb221e1b0999d4a4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::TeleportController
-  isLocked: 1
+  isNextLocked: 1
 --- !u!114 &1137385186
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21070,7 +21064,6 @@ GameObject:
   - component: {fileID: 1181076588}
   - component: {fileID: 1181076587}
   - component: {fileID: 1181076586}
-  - component: {fileID: 1181076585}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -21098,25 +21091,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1181076585
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1181076583}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &1181076586
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22800,7 +22774,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::QuestManager
   currentObjective: 0
-  maxObjective: 3
+  sceneInstructions:
+  - sceneName: D4
+    objectiveInstructions:
+    - 
+    - 
+    - 
+    quizInstruction: 
 --- !u!4 &1274209596
 Transform:
   m_ObjectHideFlags: 0
@@ -23034,7 +23014,6 @@ GameObject:
   - component: {fileID: 1280707333}
   - component: {fileID: 1280707332}
   - component: {fileID: 1280707331}
-  - component: {fileID: 1280707330}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -23062,25 +23041,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1280707330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1280707328}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &1280707331
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24028,7 +23988,7 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 0}
+      - m_Target: {fileID: 1196662847}
         m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
         m_MethodName: SetActive
         m_Mode: 6
@@ -28118,6 +28078,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetScene
   targetScene: GedungEB
+  isNextBuilding: 1
 --- !u!224 &1536581298
 RectTransform:
   m_ObjectHideFlags: 0
@@ -31498,7 +31459,6 @@ GameObject:
   - component: {fileID: 1577644412}
   - component: {fileID: 1577644411}
   - component: {fileID: 1577644410}
-  - component: {fileID: 1577644409}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -31526,25 +31486,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1577644409
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1577644407}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &1577644410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32394,6 +32335,7 @@ GameObject:
   - component: {fileID: 1616838960}
   - component: {fileID: 1616838959}
   - component: {fileID: 1616838958}
+  - component: {fileID: 1616838961}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -32484,6 +32426,25 @@ Canvas:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_TargetDisplay: 0
+--- !u!114 &1616838961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1616838956}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
+  m_IgnoreReversedGraphics: 0
+  m_CheckFor2DOcclusion: 0
+  m_CheckFor3DOcclusion: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_RaycastTriggerInteraction: 1
 --- !u!1001 &1619646953
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -34389,7 +34350,6 @@ GameObject:
   - component: {fileID: 1730720930}
   - component: {fileID: 1730720929}
   - component: {fileID: 1730720928}
-  - component: {fileID: 1730720927}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -34417,25 +34377,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1730720927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1730720925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &1730720928
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34767,7 +34708,6 @@ GameObject:
   - component: {fileID: 1744902061}
   - component: {fileID: 1744902060}
   - component: {fileID: 1744902059}
-  - component: {fileID: 1744902058}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -34795,25 +34735,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &1744902058
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1744902056}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &1744902059
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -41118,6 +41039,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ResetScene
   targetScene: GedungD4
+  isNextBuilding: 0
 --- !u!1 &1993544099
 GameObject:
   m_ObjectHideFlags: 0
@@ -41940,7 +41862,6 @@ GameObject:
   - component: {fileID: 2027109345}
   - component: {fileID: 2027109344}
   - component: {fileID: 2027109343}
-  - component: {fileID: 2027109342}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -41968,25 +41889,6 @@ RectTransform:
   m_AnchoredPosition: {x: -0.127, y: 0.162}
   m_SizeDelta: {x: 0.4146, y: 0.163}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &2027109342
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2027109340}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7951c64acb0fa62458bf30a60089fe2d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.XR.Interaction.Toolkit::UnityEngine.XR.Interaction.Toolkit.UI.TrackedDeviceGraphicRaycaster
-  m_IgnoreReversedGraphics: 0
-  m_CheckFor2DOcclusion: 0
-  m_CheckFor3DOcclusion: 0
-  m_BlockingMask:
-    serializedVersion: 2
-    m_Bits: 4294967295
-  m_RaycastTriggerInteraction: 1
 --- !u!114 &2027109343
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -43052,7 +42954,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &2093650679
 RectTransform:
   m_ObjectHideFlags: 0
@@ -43278,7 +43180,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2108472629}
   - component: {fileID: 2108472631}
-  - component: {fileID: 2108472630}
   m_Layer: 0
   m_Name: triggerbox1 (3)
   m_TagString: Untagged
@@ -43301,18 +43202,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1038755893}
   m_LocalEulerAnglesHint: {x: 0, y: 16.587, z: 0}
---- !u!114 &2108472630
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2108472628}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a665bf010662a764e8c96590cd8a83a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTrigger
 --- !u!65 &2108472631
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -43658,7 +43547,6 @@ GameObject:
   m_Component:
   - component: {fileID: 2125953539}
   - component: {fileID: 2125953541}
-  - component: {fileID: 2125953540}
   m_Layer: 0
   m_Name: triggerbox1 (1)
   m_TagString: Untagged
@@ -43681,18 +43569,6 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1038755893}
   m_LocalEulerAnglesHint: {x: 0, y: 16.587, z: 0}
---- !u!114 &2125953540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2125953538}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a665bf010662a764e8c96590cd8a83a8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::ObjectiveTrigger
 --- !u!65 &2125953541
 BoxCollider:
   m_ObjectHideFlags: 0

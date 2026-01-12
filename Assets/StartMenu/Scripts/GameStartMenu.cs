@@ -77,6 +77,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
+        modeSelect.SetActive(false);
     }
 
     public void SpwanGame(int sceneIndex)
@@ -91,6 +92,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
+        modeSelect.SetActive(false);
     }
     public void EnableLocation()
     {
@@ -99,6 +101,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(true);
+        modeSelect.SetActive(false);
     }
     public void EnableOption()
     {
@@ -107,6 +110,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(false);
         about.SetActive(false);
         location.SetActive(false);
+        modeSelect.SetActive(false);
     }
     public void EnableAbout()
     {
@@ -115,6 +119,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(false);
         about.SetActive(true);
         location.SetActive(false);
+        modeSelect.SetActive(false);
     }
 
     public void EnableControls()
@@ -124,6 +129,7 @@ public class GameStartMenu : MonoBehaviour
         controls.SetActive(true);
         about.SetActive(false);
         location.SetActive(false);
+        modeSelect.SetActive(false);
     }
 
     void EnableModeSelect()

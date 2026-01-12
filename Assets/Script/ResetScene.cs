@@ -5,20 +5,28 @@ public class SceneSwitcher : MonoBehaviour
 {
     public string targetScene;
 
+    [Header("Teleport Rule")]
+    public bool isNextBuilding; // ✔ centang hanya untuk tombol NEXT
+
     public void SwitchScene()
     {
-        string current = SceneManager.GetActiveScene().name;
-
-        // ✅ reload scene SELALU BOLEH
-        if (current == targetScene)
+        // reload selalu boleh
+        if (SceneManager.GetActiveScene().name == targetScene)
         {
-            SceneManager.LoadScene(current);
+            SceneManager.LoadScene(targetScene);
             return;
         }
 
-        // ❌ pindah scene lain → cek quest
-        if (!QuestManager.Instance.IsQuestCompleted())
+        // cek hanya untuk tombol NEXT GEDUNG
+        if (isNextBuilding &&
+            TeleportController.Instance != null &&
+            TeleportController.Instance.isNextLocked)
+        {
+            InstructionManager.Instance.ShowInstruction(
+                "Selesaikan objektif dan kuis terlebih dahulu."
+            );
             return;
+        }
 
         SceneManager.LoadScene(targetScene);
     }

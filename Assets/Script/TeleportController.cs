@@ -2,41 +2,26 @@ using UnityEngine;
 
 public class TeleportController : MonoBehaviour
 {
+    public static TeleportController Instance;
 
-    public bool isLocked = true;
+    [Tooltip("Apakah teleport ke gedung berikutnya masih terkunci")]
+    public bool isNextLocked = true;
 
-    public void LockTeleport()
+    void Awake()
     {
-        isLocked = true;
-    }
-
-    public void UnlockTeleport()
-    {
-        isLocked = false;
-    }
-
-    public void TryTeleport(System.Action teleportAction)
-    {
-        if (isLocked)
-        {
-            InstructionManager.Instance.ShowInstruction(
-            "Selesaikan objektif saat ini sebelum berpindah ke area berikutnya."
-            );
-            return;
-        }
-
-        teleportAction.Invoke();
+        Instance = this;
     }
 
     void Start()
-{
-    if (GameManager.Instance.currentMode == GameMode.FreeRoam)
     {
-        UnlockTeleport(); // semua bebas
+        if (GameManager.Instance.currentMode == GameMode.FreeRoam)
+        {
+            isNextLocked = false; // bebas
+        }
     }
-    else
+
+    public void UnlockNext()
     {
-        LockTeleport();   // ikut quest
+        isNextLocked = false;
     }
-}
 }

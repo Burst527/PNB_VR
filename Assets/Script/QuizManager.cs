@@ -48,7 +48,11 @@ public class QuizManager : MonoBehaviour
         for (int i = 0; i < optionButtons.Length; i++)
         {
             int index = i;
-            optionButtons[i].GetComponentInChildren<Text>().text = q.options[i];
+
+            optionButtons[i]
+                .GetComponentInChildren<TextMeshProUGUI>()
+                .text = q.options[i];
+
             optionButtons[i].onClick.RemoveAllListeners();
             optionButtons[i].onClick.AddListener(() => Answer(index));
         }
@@ -56,14 +60,20 @@ public class QuizManager : MonoBehaviour
 
     void Answer(int selectedIndex)
     {
-        if (selectedIndex == questions[currentQuestionIndex].correctIndex)
+        // ❌ salah → diam di soal ini
+        if (selectedIndex != questions[currentQuestionIndex].correctIndex)
         {
-            correctCount++;
+            InstructionManager.Instance.ShowInstruction(
+                "Jawaban salah, coba lagi."
+            );
+            return;
         }
-
+    
+        // ✅ benar
+        correctCount++;
         currentQuestionIndex++;
-
-        if (correctCount >= 3)
+    
+        if (correctCount >= 3 || currentQuestionIndex >= questions.Length)
         {
             FinishQuiz();
         }
@@ -73,16 +83,18 @@ public class QuizManager : MonoBehaviour
         }
     }
 
+
     void FinishQuiz()
     {
         quizPanel.SetActive(false);
 
         InstructionManager.Instance.ShowInstruction(
-            "Kuis selesai.\nTeleport ke area berikutnya telah dibuka."
+            "Kuis selesai.\nAkses ke gedung berikutnya telah dibuka."
         );
 
-        teleportController.UnlockTeleport();
+        TeleportController.Instance.UnlockNext();
     }
+
 }
 [System.Serializable]
 public class QuizQuestion   
