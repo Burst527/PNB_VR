@@ -24,6 +24,12 @@ public class GameStartMenu : MonoBehaviour
     public Button D4;
     public Button EB;
 
+    [Header("Mode Select")]
+    public GameObject modeSelect;
+    public Button normalModeButton;
+    public Button freeRoamModeButton;
+
+
     public List<Button> returnButtons;
 
     // Start is called before the first frame update
@@ -40,7 +46,8 @@ public class GameStartMenu : MonoBehaviour
         EB.onClick.AddListener(() => SpwanGame(2));
         D4.onClick.AddListener(() => SpwanGame(1)); 
         PUT.onClick.AddListener(() => SpwanGame(3)); 
-
+        normalModeButton.onClick.AddListener(StartNormalMode);
+        freeRoamModeButton.onClick.AddListener(StartFreeRoamMode);
 
 
         foreach (var item in returnButtons)
@@ -56,7 +63,7 @@ public class GameStartMenu : MonoBehaviour
 
     public void StartGame()
     {
-        EnableLocation();
+        EnableModeSelect();
 
 
         // HideAll();
@@ -118,4 +125,27 @@ public class GameStartMenu : MonoBehaviour
         about.SetActive(false);
         location.SetActive(false);
     }
+
+    void EnableModeSelect()
+    {
+        mainMenu.SetActive(false);
+        options.SetActive(false);
+        controls.SetActive(false);
+        about.SetActive(false);
+        location.SetActive(false);
+        modeSelect.SetActive(true);
+    }
+
+    void StartNormalMode()
+    {
+        GameManager.Instance.currentMode = GameMode.Guided;
+        SpwanGame(1);
+    }
+
+    void StartFreeRoamMode()
+    {
+        GameManager.Instance.currentMode = GameMode.FreeRoam;
+        EnableLocation();
+    }
+
 }

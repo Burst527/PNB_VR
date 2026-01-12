@@ -1,0 +1,93 @@
+using UnityEngine;
+using UnityEngine.UI;
+using TMPro;
+
+public class QuizManager : MonoBehaviour
+{
+    public static QuizManager Instance;
+
+    [Header("UI")]
+    public GameObject quizPanel;
+    public TextMeshProUGUI questionText;
+    public Button[] optionButtons;
+
+    [Header("Quiz Data (per Scene)")]
+    public QuizQuestion[] questions;
+
+    [Header("Teleport")]
+    public TeleportController teleportController;
+
+    int currentQuestionIndex = 0;
+    int correctCount = 0;
+
+    void Awake()
+    {
+        Instance = this;
+        quizPanel.SetActive(false);
+    }
+
+    public void ShowQuiz()
+    {
+        quizPanel.SetActive(true);
+        currentQuestionIndex = 0;
+        correctCount = 0;
+        ShowQuestion();
+    }
+
+    void ShowQuestion()
+    {
+        if (currentQuestionIndex >= questions.Length)
+        {
+            FinishQuiz();
+            return;
+        }
+
+        QuizQuestion q = questions[currentQuestionIndex];
+        questionText.text = q.question;
+
+        for (int i = 0; i < optionButtons.Length; i++)
+        {
+            int index = i;
+            optionButtons[i].GetComponentInChildren<Text>().text = q.options[i];
+            optionButtons[i].onClick.RemoveAllListeners();
+            optionButtons[i].onClick.AddListener(() => Answer(index));
+        }
+    }
+
+    void Answer(int selectedIndex)
+    {
+        if (selectedIndex == questions[currentQuestionIndex].correctIndex)
+        {
+            correctCount++;
+        }
+
+        currentQuestionIndex++;
+
+        if (correctCount >= 3)
+        {
+            FinishQuiz();
+        }
+        else
+        {
+            ShowQuestion();
+        }
+    }
+
+    void FinishQuiz()
+    {
+        quizPanel.SetActive(false);
+
+        InstructionManager.Instance.ShowInstruction(
+            "Kuis selesai.\nTeleport ke area berikutnya telah dibuka."
+        );
+
+        teleportController.UnlockTeleport();
+    }
+}
+[System.Serializable]
+public class QuizQuestion   
+{
+    public string question;
+    public string[] options;
+    public int correctIndex;
+}
