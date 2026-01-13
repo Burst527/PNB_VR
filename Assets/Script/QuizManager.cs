@@ -14,9 +14,6 @@ public class QuizManager : MonoBehaviour
     [Header("Quiz Data (per Scene)")]
     public QuizQuestion[] questions;
 
-    [Header("Teleport")]
-    public TeleportController teleportController;
-
     int currentQuestionIndex = 0;
     int correctCount = 0;
 

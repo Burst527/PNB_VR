@@ -10,13 +10,27 @@ public class QuestManager : MonoBehaviour
 
     [Header("Scene Instructions")]
     public SceneInstructionData[] sceneInstructions;
+    
+    [Header("Quest Pointers (Optional)")]
+    public ObjectivePointerData[] objectivePointers;
+
+    [Header("Quiz Pointer")]
+    public GameObject quizPointer;
+
 
     SceneInstructionData currentSceneData;
 
     void Awake()
     {
         Instance = this;
+
+        if (GameManager.Instance != null &&
+            GameManager.Instance.currentMode == GameMode.FreeRoam)
+        {
+            ForceDisableAllPointers();
+        }
     }
+
 
     void Start()
     {
@@ -26,8 +40,12 @@ public class QuestManager : MonoBehaviour
             return;
         }
 
+        ForceDisableAllPointers();
+
         LoadSceneInstructionData();
         ShowCurrentInstruction();
+
+        ActivatePointersForObjective(currentObjective);
     }
 
     void LoadSceneInstructionData()
@@ -48,6 +66,7 @@ public class QuestManager : MonoBehaviour
 
     public void CompleteObjective()
     {
+        DestroyPointersForObjective(currentObjective);
         currentObjective++;
 
         if (currentSceneData == null) return;
@@ -55,6 +74,8 @@ public class QuestManager : MonoBehaviour
         if (currentObjective < currentSceneData.objectiveInstructions.Length)
         {
             ShowCurrentInstruction();
+
+            ActivatePointersForObjective(currentObjective);
         }
         else
         {
@@ -62,7 +83,8 @@ public class QuestManager : MonoBehaviour
                 currentSceneData.quizInstruction
             );
 
-            QuizManager.Instance.ShowQuiz();
+            if (quizPointer != null)
+                quizPointer.SetActive(true);
         }
     }
 
@@ -74,6 +96,71 @@ public class QuestManager : MonoBehaviour
             currentSceneData.objectiveInstructions[currentObjective]
         );
     }
+
+    void ActivatePointersForObjective(int index)
+    {
+        if (objectivePointers == null || index >= objectivePointers.Length)
+            return;
+
+        var data = objectivePointers[index];
+
+        if (data.mainPointer != null)
+            data.mainPointer.SetActive(true);
+
+        if (data.subQuestPointers != null)
+        {
+            foreach (var p in data.subQuestPointers)
+            {
+                if (p != null)
+                    p.SetActive(true);
+            }
+        }
+    }
+
+    void DestroyPointersForObjective(int index)
+    {
+        if (objectivePointers == null || index >= objectivePointers.Length)
+            return;
+
+        var data = objectivePointers[index];
+
+        if (data.mainPointer != null)
+            Destroy(data.mainPointer);
+
+        if (data.subQuestPointers != null)
+        {
+            foreach (var p in data.subQuestPointers)
+            {
+                if (p != null)
+                    Destroy(p);
+            }
+        }
+    }
+
+    void ForceDisableAllPointers()
+    {
+        if (objectivePointers != null)
+        {
+            foreach (var data in objectivePointers)
+            {
+                if (data.mainPointer != null)
+                    data.mainPointer.SetActive(false);
+
+                if (data.subQuestPointers != null)
+                {
+                    foreach (var p in data.subQuestPointers)
+                    {
+                        if (p != null)
+                            p.SetActive(false);
+                    }
+                }
+            }
+        }
+
+        if (quizPointer != null)
+            quizPointer.SetActive(false);
+    }
+
 }
 [System.Serializable]
 public class SceneInstructionData
@@ -85,4 +172,12 @@ public class SceneInstructionData
 
     [TextArea]
     public string quizInstruction;
+
+}
+
+[System.Serializable]
+public class ObjectivePointerData
+{
+    public GameObject mainPointer;           // pointer utama
+    public GameObject[] subQuestPointers;     // optional
 }

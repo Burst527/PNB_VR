@@ -17,7 +17,13 @@ public class InstructionManager : MonoBehaviour
     }
 
     public void ShowInstruction(string message)
-    {
+    {   
+        if (GameManager.Instance.currentMode == GameMode.FreeRoam)
+        {  
+            panel.SetActive(false);
+            return;
+        }
+
         StopAllCoroutines();
         panel.SetActive(true);
         instructionText.text = message;
