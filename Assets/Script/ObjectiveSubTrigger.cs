@@ -1,5 +1,6 @@
 using UnityEngine;
 
+
 public class ObjectiveSubTrigger : MonoBehaviour
 {
     private bool triggered = false;
@@ -28,7 +29,25 @@ public class ObjectiveSubTrigger : MonoBehaviour
         GetComponent<Collider>().enabled = false;
 
         gameObject.SetActive(false);
+        PlaySound();
         
         parent.NotifySubTriggered(this);
+    }
+
+    private static AudioClip cachedClip;
+    private static AudioSource tempSource;
+    void PlaySound()
+    {
+        if (cachedClip == null)
+            cachedClip = Resources.Load<AudioClip>("audio/trigger");
+
+        if (tempSource == null)
+        {
+            GameObject go = new GameObject("TriggerAudio");
+            tempSource = go.AddComponent<AudioSource>();
+        }
+
+        if (cachedClip != null)
+            tempSource.PlayOneShot(cachedClip);
     }
 }

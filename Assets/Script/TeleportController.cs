@@ -9,14 +9,7 @@ public class TeleportController : MonoBehaviour
 
     void Awake()
     {
-        if (Instance != null && Instance != this)
-        {
-            Destroy(gameObject);
-            return;
-        }
-    
         Instance = this;
-        DontDestroyOnLoad(gameObject);
     }
 
     void Start()
@@ -24,6 +17,9 @@ public class TeleportController : MonoBehaviour
         if (GameManager.Instance.currentMode == GameMode.FreeRoam)
         {
             isNextLocked = false; // bebas
+        }else
+        {
+            isNextLocked = true; // terkunci di mode objektif
         }
     }
 

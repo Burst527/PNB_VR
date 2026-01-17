@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class QuizManager : MonoBehaviour
 {
@@ -84,12 +85,23 @@ public class QuizManager : MonoBehaviour
     void FinishQuiz()
     {
         quizPanel.SetActive(false);
-
-        InstructionManager.Instance.ShowInstruction(
-            "Kuis selesai.\nAkses ke gedung berikutnya telah dibuka."
-        );
-
-        TeleportController.Instance.UnlockNext();
+    
+        string sceneName = SceneManager.GetActiveScene().name;
+    
+        if (sceneName == "GedungPUT")
+        {
+            InstructionManager.Instance.ShowInstruction(
+                "Kuis selesai.\nSelamat! Anda telah menyelesaikan game ini."
+            );
+        }
+        else
+        {
+            InstructionManager.Instance.ShowInstruction(
+                "Kuis selesai.\nAkses ke gedung berikutnya telah dibuka."
+            );
+    
+            TeleportController.Instance.UnlockNext();
+        }
     }
 
 }
